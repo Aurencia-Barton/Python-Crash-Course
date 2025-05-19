@@ -1,5 +1,5 @@
 class Car:
-    """A simple attempt to rpresent a car."""
+    """A simple attempt to represent a car."""
     def __init__(self, make, model, year):
         """ Initialize attributes to describe a car."""
         self.make = make
@@ -20,13 +20,25 @@ class Car:
         """Set the odometer reading to the given value. Reject the change if it attempts to roll the odometer back."""
         if mileage >= self.odometer_reading:
             self.odometer_reading = mileage  # setting the odometer reading
-        else:
-            print("You can't roll back an odometer!")
+        else:       
+            print("You can't roll back an odometer!") # rejecting the change
+    
+    def increment_odometer(self, miles):
+        """Add the given amount to the odometer reading."""
+        self.odometer_reading += miles
+my_used_car = Car('subaru', 'outback', 2019)
+print(my_used_car.get_descriptive_name())
 
-my_new_car = Car('audi', 'a4', 2024)
-print(my_new_car.get_descriptive_name())
+my_used_car.update_odometer(23_500)
+my_used_car.read_odometer()
 
-#my_new_car.odometer_reading = 23 # setting the odometer reading directly (not recommended)
+my_used_car.increment_odometer(100)
+my_used_car.read_odometer()
 
-my_new_car.update_odometer(23) # setting the odometer reading
-my_new_car.read_odometer() # printing the odometer reading or calling the method
+# my_new_car = Car('audi', 'a4', 2024)
+# print(my_new_car.get_descriptive_name())
+
+# #my_new_car.odometer_reading = 23 # setting the odometer reading directly (not recommended)
+
+# my_new_car.update_odometer(23) # setting the odometer reading
+# my_new_car.read_odometer() # printing the odometer reading or calling the method
