@@ -17,10 +17,14 @@ class Car:
         print(f"This car has {self.odometer_reading} miles on it.")
     
     def update_odometer(self, mileage):
-        """Set the odometerreading to the given value."""
-        my_new_car = Car('audi', 'a4', 2024)
-        print(my_new_car.get_descriptive_name())
+        """Set the odometer reading to the given value."""
+        self.odometer_reading = mileage
 
-       # my_new_car.odometer_reading = 23
-        my_new_car.update_odometer(23)
-        my_new_car.read_odometer()
+
+my_new_car = Car('audi', 'a4', 2024)
+print(my_new_car.get_descriptive_name())
+
+#my_new_car.odometer_reading = 23 # setting the odometer reading directly (not recommended)
+
+my_new_car.update_odometer(23) # setting the odometer reading
+my_new_car.read_odometer() # printing the odometer reading or calling the method
