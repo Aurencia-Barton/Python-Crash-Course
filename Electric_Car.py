@@ -26,19 +26,13 @@ class Car:
     def increment_odometer(self, miles):
         """Add the given amount to the odometer reading."""
         self.odometer_reading += miles
-my_used_car = Car('subaru', 'outback', 2019)
-print(my_used_car.get_descriptive_name())
 
-my_used_car.update_odometer(23_500) # setting the odometer reading at 23,500 miles.
-my_used_car.read_odometer()
+class ElectricCar(Car):
+    """Represent aspects of a car, specific to electric vehicles."""
+    
+    def __init__(self, make, model, year):
+        """Initializes attributes of the parent class."""
+        super().__init__(make, model, year)
 
-my_used_car.increment_odometer(100) # incemremnts the ofdometer reading by 100 miles.
-my_used_car.read_odometer()
-
-# my_new_car = Car('audi', 'a4', 2024)
-# print(my_new_car.get_descriptive_name())
-
-# #my_new_car.odometer_reading = 23 # setting the odometer reading directly (not recommended)
-
-# my_new_car.update_odometer(23) # setting the odometer reading
-# my_new_car.read_odometer() # printing the odometer reading or calling the method
+my_leaf = ElectricCar('nissan', 'leaf', 2024)
+print(my_leaf.get_descriptive_name())
