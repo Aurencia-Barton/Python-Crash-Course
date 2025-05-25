@@ -46,7 +46,7 @@ class Battery:
             range = 225
         print(f"This car can go about {range} on a full charge.")
 
-        
+
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
     

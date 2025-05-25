@@ -12,7 +12,7 @@
 
 ################################
 
-cars = ['audi', 'bmw', 'suburu', 'toyota']
+cars = ['audi', 'bmw', 'saburu', 'toyota']
 
 # for loop including an if statement to print the car, BMW.
 for car in cars:
