@@ -1,6 +1,6 @@
 class Car:
     """A simple attempt to represent a car."""
-    def __init__(self, make, model, year):
+    def __init__(self, make, model, year): # initializing the attributes
         """ Initialize attributes to describe a car."""
         self.make = make
         self.model = model
@@ -26,14 +26,14 @@ class Car:
     def increment_odometer(self, miles):
         """Add the given amount to the odometer reading."""
         self.odometer_reading += miles
-# my_used_car = Car('subaru', 'outback', 2019)
-# print(my_used_car.get_descriptive_name())
+my_used_car = Car('subaru', 'outback', 2019)
+print(my_used_car.get_descriptive_name())
 
-# my_used_car.update_odometer(23_500) # setting the odometer reading at 23,500 miles.
-# my_used_car.read_odometer()
+my_used_car.update_odometer(23_500)
+my_used_car.read_odometer()
 
-# my_used_car.increment_odometer(100) # incemremnts the ofdometer reading by 100 miles.
-# my_used_car.read_odometer()
+my_used_car.increment_odometer(100)
+my_used_car.read_odometer()
 
 # my_new_car = Car('audi', 'a4', 2024)
 # print(my_new_car.get_descriptive_name())
